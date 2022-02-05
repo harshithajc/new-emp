@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
+
+import Header from './components/shared/Header/header.component';
+
+import Register from './components/Register/register.component';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div className='app' style={{position:'relative' ,right:"30px" }}>
+      <h5 style={{color:"ButtonFace",marginLeft:'46%',marginTop:"20px"}} >Register your account</h5>
+    <Container style={{backgroundColor:"ButtonFace" ,marginTop:'20px',marginLeft:'40%',width:'25%'}}>
+      <Row style={{backgroundColor:"AppWorkspace" ,width:"10%"}}>
+        <Col>
+          <Header />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col md={4}>
+          <Register />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col>
+          
+        </Col>
+      </Row>
+    </Container>
+ 
+  </div>
+   );
 }
 
 export default App;
