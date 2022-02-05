@@ -7,6 +7,7 @@ import Register from './components/Register/register.component';
 
 function App() {
   return (
+
     <div className='app' style={{position:'relative' ,right:"30px" }}>
       <h5 style={{color:"ButtonFace",marginLeft:'46%',marginTop:"20px"}} >Register your account</h5>
     <Container style={{backgroundColor:"ButtonFace" ,marginTop:'20px',marginLeft:'40%',width:'25%'}}>
@@ -31,6 +32,13 @@ function App() {
  
   </div>
    );
+
+    <div className="App">
+   <Edit/>
+   <Login/>
+    </div>
+  );
+
 }
 
 export default App;
