@@ -1,8 +1,9 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 
-function Employees() {
+function Employees(props) {
   const [posts, setposts] = useState([])
+  const [editId, seteditId] = useState()
 
   useEffect(() => {
     fetchPosts()
@@ -13,10 +14,14 @@ function Employees() {
     try {
       const response = await axios.get(url)
       console.log(response.data)
+      console.log(error)
       setposts(response.data)
     } catch (error) {
-      console.log(error)
     }
+  }
+  const editemp=(id)=>{
+    seteditId(id)
+    props.history.push('/edit')
   }
 
   const deleteEmp = async (empId) => {
@@ -56,7 +61,7 @@ function Employees() {
                 <td>{data.title}</td>
                 <td>{data.body}</td>
                 <td>
-                  <button className="btn btn-warning">Edit</button>
+                  <button className="btn btn-warning" onClick={()=>{editemp(index+1)}}>Edit</button>
                 </td>
                 <td>
                   <button
