@@ -54,7 +54,7 @@ function Employees() {
                 <th scope="row">{index + 1}</th>
                 <td>{data.userId}</td>
                 <td>{data.title}</td>
-                <td></td>
+                <td>{data.body}</td>
                 <td>
                   <button className="btn btn-warning">Edit</button>
                 </td>
