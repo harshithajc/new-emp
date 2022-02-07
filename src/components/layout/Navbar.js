@@ -23,12 +23,12 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link active" aria-current="page" to="/home">
                   Employees
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/addemployee">
+                <Link className="nav-link" to="/adddetails">
                   Add Employee
                 </Link>
               </li>
